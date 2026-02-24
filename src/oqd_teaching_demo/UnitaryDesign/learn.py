@@ -1,7 +1,7 @@
 """
 tabs/learn.py
 ─────────────
-"Learn" tab  concept cards, live Bloch sphere, quick-gate panel,
+"Learn" tab — guided concept cards, live Bloch sphere, quick-gate panel,
 probability bars, and laser-status dots.
 
 Public API
