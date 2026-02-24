@@ -3,7 +3,8 @@ state.py
 ────────
 Centralised mutable application state.
 
-
+All UI tabs read and write through this single module so there is one
+source of truth.  Nothing here imports from NiceGUI; it is plain Python.
 """
 
 from __future__ import annotations
@@ -65,9 +66,9 @@ class ScoreState:
         self.current_challenge = 0
 
 
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 # SINGLETON INSTANCES
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 
 qubit   = QubitState()
 circuit = CircuitState()
