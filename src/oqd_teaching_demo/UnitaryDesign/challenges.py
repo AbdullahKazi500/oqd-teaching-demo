@@ -2,7 +2,8 @@
 tabs/challenge.py
 ─────────────────
 "Challenge" tab — presents progressively harder quantum-state targets,
-validates the learner's gate choices, awards points.
+validates the learner's gate choices, awards points, and drives the hardware
+as a victory celebration.
 
 Public API
 ──────────
