@@ -2,35 +2,36 @@
 config.py
 ─────────
 All application-level constants, hardware settings, gate mappings,
-challenge definitions, and CSS theme. 
+challenge definitions, and CSS theme. Nothing here has side-effects —
+import freely from any other module.
 """
 
 import math
 
-
+# ─────────────────────────────────────────────────────────────────────────────
 # HARDWARE
-#
+# ─────────────────────────────────────────────────────────────────────────────
 
 # Set to False on a real Raspberry Pi to use actual hardware
 MOCK: bool = True
 
-STREAM_IP_MOCK = "https://placehold.co/480x360/0a0a1a/00ff88?text=Camera+Feed"
+STREAM_IP_MOCK = "docs/img/bloodstone.jpg"  # matches original OQD main.py fallback
 STREAM_IP_REAL = "http://127.0.0.1:5000/stream"
 
 NUM_LASER_CHANNELS = 4
 
-
+# ─────────────────────────────────────────────────────────────────────────────
 # APP
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 
 APP_TITLE   = "OQD Quantum Explorer"
 APP_HOST    = "0.0.0.0"
 APP_PORT    = 8080
 APP_FAVICON = "⚛"
 
-
+# ─────────────────────────────────────────────────────────────────────────────
 # GATE → HARDWARE MAPPINGS
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 
 #: Laser intensity pattern (4 channels) for each gate
 GATE_LASER_PATTERNS: dict[str, list[float]] = {
@@ -56,9 +57,9 @@ GATE_TRAP_MOTION: dict[str, str] = {
 }
 DEFAULT_TRAP_MOTION = "stop"
 
-
+# ─────────────────────────────────────────────────────────────────────────────
 # GATE METADATA  (used in the circuit builder palette)
-#
+# ─────────────────────────────────────────────────────────────────────────────
 
 GATE_INFO: dict[str, tuple[str, str]] = {
     "H": ("Hadamard",  "Creates superposition"),
@@ -70,12 +71,12 @@ GATE_INFO: dict[str, tuple[str, str]] = {
     "M": ("Measure",   "Collapse + readout"),
 }
 
-# Gates available in the quick-gate panel 
+# Gates available in the quick-gate panel (no measurement)
 QUICK_GATES = ["H", "X", "Y", "Z", "S", "T"]
 
-#
+# ─────────────────────────────────────────────────────────────────────────────
 # CONCEPT CARDS  (Learn tab)
-#
+# ─────────────────────────────────────────────────────────────────────────────
 
 CONCEPT_CARDS = [
     {
@@ -130,8 +131,9 @@ CONCEPT_CARDS = [
     },
 ]
 
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 # CHALLENGES
+# ─────────────────────────────────────────────────────────────────────────────
 
 CHALLENGES: list[dict] = [
     {
@@ -175,9 +177,9 @@ CHALLENGES: list[dict] = [
 # Tolerance (radians) when checking whether the qubit matches the target
 CHALLENGE_TOLERANCE = 0.2
 
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 # CSS THEME
-
+# ─────────────────────────────────────────────────────────────────────────────
 
 DARK_THEME_CSS = """
 <style>
