@@ -1,10 +1,7 @@
 """
 quantum.py
 ──────────
-Pure quantum-mechanics helpers.
-
-All functions are stateless and operate
-only on (theta, phi) Bloch-sphere angles, making them trivially testable.
+o.
 """
 
 from __future__ import annotations
@@ -113,9 +110,9 @@ def bloch_state_name(theta: float, phi: float) -> str:
     return "|ψ⟩"
 
 
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 # HARDWARE MAPPING HELPERS
-
+# ─────────────────────────────────────────────────────────────────────────────
 
 def laser_intensities_for_gate(gate: str) -> list[float]:
     """Return the 4-channel laser intensity list for a given gate."""
@@ -127,9 +124,9 @@ def trap_motion_for_gate(gate: str) -> str:
     return GATE_TRAP_MOTION.get(gate, DEFAULT_TRAP_MOTION)
 
 
-#
+# ─────────────────────────────────────────────────────────────────────────────
 # CHALLENGE CHECKING
-# 
+# ─────────────────────────────────────────────────────────────────────────────
 
 def challenge_passed(
     theta: float,
