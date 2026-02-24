@@ -2,6 +2,7 @@
 widgets/gate_buttons.py
 ───────────────────────
 Reusable NiceGUI components for gate-button rows and palettes.
+Imported by any tab that needs interactive gate selection.
 """
 
 from __future__ import annotations
