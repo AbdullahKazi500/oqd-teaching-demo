@@ -3,7 +3,7 @@ widgets/bloch.py
 ────────────────
 Bloch-sphere SVG renderer.
 
-Depends only on standard-library math — no NiceGUI, no hardware.
+.
 Returns raw SVG strings that can be injected with ui.html().
 """
 
