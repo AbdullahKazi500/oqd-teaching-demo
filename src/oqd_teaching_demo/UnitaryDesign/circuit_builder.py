@@ -1,7 +1,7 @@
 """
 tabs/circuit_builder.py
 ───────────────────────
-"Circuit Builder" tab gate palette, circuit wire, run/clear controls,
+"Circuit Builder" tab — gate palette, circuit wire, run/clear controls,
 step-by-step hardware execution, and a live Bloch sphere.
 
 Public API
